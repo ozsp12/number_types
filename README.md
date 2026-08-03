@@ -64,12 +64,12 @@ conda env create -f requirements.yml
 conda activate number-types
 ```
 
-# Class-based usage
+# Class-based project
 
-The development version derived from `04_fourth_version.ipynb` is contained in [`desenv/`](desenv/). It preserves the notebook's 34 categories and reference-style animated transitions while exposing the implementation through a documented `NumberTypesVisualizer` class.
+The repository root contains the class-based project derived from the historical notebooks. The documented [`NumberTypesVisualizer`](number_types_visualizer.py) class preserves the 34 categories and the reference-style animated transitions developed in `04_fourth_version.ipynb`. All four pre-existing notebooks are preserved under [`desenv/`](desenv/) as the development history.
 
 ```python
-from desenv import NumberTypesVisualizer
+from number_types_visualizer import NumberTypesVisualizer
 
 visualizer = NumberTypesVisualizer(fps=30)
 
@@ -89,7 +89,14 @@ result = visualizer.render(
 print(result)
 ```
 
-Installation instructions, the complete class API, an executable example, and tests are documented in [`desenv/README.md`](desenv/README.md).
+The executable [`example_usage.py`](example_usage.py) demonstrates a static preview and configurable media export. Install the root [`requirements.yml`](requirements.yml), then run:
+
+```bash
+python example_usage.py
+python -m unittest discover -s tests -v
+```
+
+The development history and notebook sequence are documented in [`desenv/README.md`](desenv/README.md).
 
 # References
 
