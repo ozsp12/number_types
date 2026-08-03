@@ -1,6 +1,6 @@
 # Introduction
 
-A Python/Matplotlib project that visualizes arithmetic, figurate, recursive, and digit-based classes of integers on a \(10 \times 10\) grid containing the numbers from 1 to 100. Each category is represented by colored cells over a black background. During the transition from one category to the next, the highlighted squares move continuously across the grid rather than simply disappearing and reappearing. The result is suitable for educational videos, YouTube Shorts, Instagram Reels, TikTok, lectures, and mathematical outreach.
+This Python project uses Matplotlib to visualize 34 arithmetic, figurate, recursive, and digit-based classes of positive integers on a \(10 \times 10\) grid containing the numbers from 1 to 100. Each class is represented by colored cells on a black background. In the latest animation, highlighted cells move continuously between successive classes, making intersections, differences, and changes in cardinality visually apparent. The notebooks document successive stages of the implementation, from a direct category animation to the reference-style version with interpolated transitions and configurable media export. The resulting material is intended for lectures, mathematical outreach, and short-form educational videos.
 
 
 # Included number categories
@@ -57,22 +57,17 @@ Recommended environment:
 - SciPy
 - FFmpeg
 
+The Conda environment is specified in [`requirements.yml`](requirements.yml):
+
+```bash
+conda env create -f requirements.yml
+conda activate number-types
+```
+
 # References
 
-* https://en.wikipedia.org/wiki/Smith_number
-* https://youtube.com/shorts/udTmQRv70x4?is=NEW_HiM7LQ_z1nhP
+Books, research articles, sequence records, and software documentation are listed in [`REFERENCES.md`](REFERENCES.md).
 
-# Social Media
-Currículo Lattes: http://lattes.cnpq.br/6730251976463283  
-Webpage: https://ozsp12.github.io/  
-Substack: https://substack.com/@olsp1982  
-GitHub: https://github.com/ozsp12  
-ResearchGate: https://www.researchgate.net/profile/Osvaldo-Santos-Pereira  
-Google Scholar: https://scholar.google.com/citations?user=HIZp0X8AAAAJ&hl=en  
-ORCID: https://orcid.org/0000-0003-2231-517X  
-LinkedIn: https://www.linkedin.com/in/ozsp12  
-YouTube: https://www.youtube.com/@ozlsp12    
-TikTok: https://www.tiktok.com/@ozsp12  
-Patreon: https://www.patreon.com/ozsp12  
-Medium: https://medium.com/@ozsp12  
-X (Twitter): https://x.com/ozsp12 
+# Author
+
+**Dr. Osvaldo L. Santos-Pereira** — [Academic webpage](https://ozsp12.github.io/) · [Lattes](http://lattes.cnpq.br/6730251976463283) · [ORCID](https://orcid.org/0000-0003-2231-517X) · [Google Scholar](https://scholar.google.com/citations?user=HIZp0X8AAAAJ&hl=en) · [ResearchGate](https://www.researchgate.net/profile/Osvaldo-Santos-Pereira) · [GitHub](https://github.com/ozsp12) · [LinkedIn](https://www.linkedin.com/in/ozsp12) · [Substack](https://substack.com/@olsp1982) · [Medium](https://medium.com/@ozsp12) · [YouTube](https://www.youtube.com/@ozlsp12) · [X](https://x.com/ozsp12)
