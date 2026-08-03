@@ -64,6 +64,33 @@ conda env create -f requirements.yml
 conda activate number-types
 ```
 
+# Class-based usage
+
+The development version derived from `04_fourth_version.ipynb` is contained in [`desenv/`](desenv/). It preserves the notebook's 34 categories and reference-style animated transitions while exposing the implementation through a documented `NumberTypesVisualizer` class.
+
+```python
+from desenv import NumberTypesVisualizer
+
+visualizer = NumberTypesVisualizer(fps=30)
+
+# Generate a single static preview.
+visualizer.save_preview(
+    "Prime Numbers",
+    "output/example_prime_numbers.png",
+)
+
+# Render the complete MP4 animation and all category previews.
+result = visualizer.render(
+    output_dir="output",
+    save_mp4=True,
+    save_gif=False,
+    save_previews=True,
+)
+print(result)
+```
+
+Installation instructions, the complete class API, an executable example, and tests are documented in [`desenv/README.md`](desenv/README.md).
+
 # References
 
 Books, research articles, sequence records, and software documentation are listed in [`REFERENCES.md`](REFERENCES.md).
