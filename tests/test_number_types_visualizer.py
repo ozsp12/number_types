@@ -2,7 +2,7 @@
 
 import unittest
 
-from desenv.number_types_visualizer import NumberTypesVisualizer
+from number_types_visualizer import NumberTypesVisualizer
 
 
 class NumberTypesVisualizerTests(unittest.TestCase):

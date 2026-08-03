@@ -1,51 +1,20 @@
-# Class-Based Development Version
+# Development Notebooks
 
-This folder contains the class-based project derived from `04_fourth_version.ipynb`. The original notebook remains unchanged at the repository root and is also copied here as the implementation reference.
+This folder preserves the four pre-existing notebooks that record the development of the number-category visualization. Their contents have not been rewritten during the class-based refactoring.
 
-## Files
-
-| File | Purpose |
+| Notebook | Role in the development history |
 |---|---|
-| `04_fourth_version.ipynb` | Unmodified source notebook used for the refactoring |
-| `number_types_visualizer.py` | Documented `NumberTypesVisualizer` class |
-| `example_usage.py` | Minimal executable usage example |
-| `requirements.yml` | Reproducible Conda environment |
-| `tests/` | Mathematical regression tests |
+| `01_first_version.ipynb` | Initial direct implementation and first category animation |
+| `02_second_version.ipynb` | Expanded category catalog and reusable generation function |
+| `03_third_version.ipynb` | Intermediate transition and rendering experiments |
+| `04_fourth_version.ipynb` | Reference implementation used to design the root class |
 
-## Setup
+The production project is located at the repository root:
 
-```bash
-conda env create -f desenv/requirements.yml
-conda activate number-types-desenv
-```
+- `number_types_visualizer.py`: documented class implementation;
+- `example_usage.py`: executable example;
+- `requirements.yml`: Conda environment;
+- `tests/`: mathematical regression tests;
+- `README.md`: installation and usage documentation.
 
-## Example
-
-From the repository root:
-
-```bash
-python desenv/example_usage.py
-```
-
-The example creates a static prime-number preview and returns animation metadata without rendering a long video. To export media, change the corresponding flags:
-
-```python
-from desenv import NumberTypesVisualizer
-
-visualizer = NumberTypesVisualizer(fps=30)
-result = visualizer.render(
-    output_dir="output",
-    save_mp4=True,
-    save_gif=False,
-    save_previews=True,
-)
-print(result)
-```
-
-MP4 export requires FFmpeg. GIF export uses Pillow. SciPy is used for minimum-cost matching between cells; the class retains a deterministic fallback when SciPy is unavailable.
-
-## Tests
-
-```bash
-python -m unittest discover -s desenv/tests -v
-```
+The notebooks remain useful as an audit trail and for comparing design decisions. New production changes should be made in the root class. A new notebook should be added here only when it records a distinct exploratory or pedagogical stage.
