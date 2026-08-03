@@ -1,0 +1,12 @@
+name: number-types-desenv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - pillow
+  - scipy
+  - ffmpeg
+  - jupyter
+  - ipykernel
