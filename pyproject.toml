@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "number-types-visualizer"
+version = "0.1.0"
+description = "Classify and visualize notable integer sequences and number classes"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Osvaldo L. Santos-Pereira"}]
+dependencies = []
+
+[project.optional-dependencies]
+visualization = ["matplotlib>=3.8", "numpy>=1.26", "pillow>=10", "scipy>=1.11"]
+notebook = ["jupyter>=1.0", "nbclient>=0.9", "nbformat>=5.9"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
